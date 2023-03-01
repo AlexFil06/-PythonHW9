@@ -1,6 +1,6 @@
 
 
-def menu():
+def menu() -> int:
     print('''Главное меню:\n
     1.Открыть файл
     2.Сохранитиь файл
@@ -10,8 +10,10 @@ def menu():
     6.Найти контакт
     7.Удалить контакт
     8.Выход''')
-    choice = int(input('Выберите пункт -> '))
-    return choice
+    while True:
+        choice = input('Выберите пункт -> ')
+        if choice.isdigit() and (0 < int(choice) < 9):
+            return int(choice)
 
 
 def show_contacts(pb: list[dict]):

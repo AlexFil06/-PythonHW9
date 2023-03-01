@@ -1,5 +1,4 @@
 from view import menu, show_contacts, new_contact_input, find_contact, input_ind
-# from data import open_file, get, add, save, find_o, change, delete
 import data
 
 pb = data.PhoneBook('phone.txt')
